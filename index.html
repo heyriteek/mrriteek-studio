@@ -127,7 +127,6 @@
             box-shadow: none;
         }
 
-        /* PREMIUM HEADER NAV */
         header {
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(15px);
@@ -184,7 +183,6 @@
         .menu-link:hover, .menu-link.active-nav { color: var(--gold-mid); }
         .hamburger { display: none; font-size: 1.4rem; cursor: pointer; color: var(--bg-dark); }
 
-        /* SPA PAGES VIEWS */
         .view-panel { display: none; padding-top: 90px; animation: fadeIn 0.5s ease; }
         .view-panel.active-panel { display: block; }
 
@@ -193,7 +191,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* HERO ZONE */
         .hero-banner {
             background: linear-gradient(135deg, #0f1016 0%, #1c1d24 100%);
             padding: 140px 0;
@@ -223,14 +220,12 @@
             font-weight: 300;
         }
 
-        /* GRID SYSTEM */
         .pro-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        /* STUDIO CARD DESIGN */
         .studio-card {
             background: var(--pure-white);
             border: 1px solid #eaeaea;
@@ -285,7 +280,6 @@
         .card-details h3 { font-size: 1.15rem; color: var(--bg-dark); margin-bottom: 6px; }
         .card-details p { color: var(--gold-dark); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* PORTFOLIO FILTER */
         .filter-strip {
             display: flex; justify-content: center; gap: 12px; margin-bottom: 50px; flex-wrap: wrap;
         }
@@ -300,14 +294,12 @@
             background: var(--bg-dark); color: var(--pure-white); border-color: var(--bg-dark);
         }
 
-        /* WHY US DECK */
         .why-billboard { background: #111215; color: #fff; border-top: 5px solid var(--gold-mid); }
         .feature-box { text-align: center; padding: 30px 15px; }
         .feature-box i { font-size: 2.5rem; color: var(--gold-mid); margin-bottom: 20px; }
         .feature-box h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--pure-white); }
         .feature-box p { color: #a0a0a5; font-size: 0.9rem; }
 
-        /* PRICING SYSTEM */
         .price-container {
             background: #fff; border: 1px solid #e0e0e0; padding: 50px 35px; position: relative; transition: var(--transition);
         }
@@ -327,7 +319,6 @@
         .feature-list li { padding: 10px 0; border-bottom: 1px solid #f9f9f9; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
         .feature-list li i { color: var(--gold-mid); }
 
-        /* FAQ ACCORDION */
         .accordion-max { max-width: 800px; margin: 0 auto; }
         .acc-node { background: #fff; border: 1px solid #e0e0e0; margin-bottom: 15px; }
         .acc-head { padding: 22px; font-weight: 600; font-size: 0.95rem; color: var(--bg-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
@@ -335,7 +326,6 @@
         .acc-node.active-acc .acc-body { padding: 0 22px 22px 22px; max-height: 200px; }
         .acc-node.active-acc { border-color: var(--gold-mid); }
 
-        /* CONTACT SYSTEM */
         .contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; }
         .contact-meta { display: flex; flex-direction: column; gap: 35px; }
         .meta-tile { display: flex; gap: 15px; }
@@ -349,7 +339,6 @@
         .form-input { width: 100%; padding: 14px; border: 1px solid #cbd5e1; background: #fafafa; outline: none; font-size: 0.95rem; }
         .form-input:focus { border-color: var(--bg-dark); background: #fff; }
 
-        /* PAYMENT POPUP (UPI) */
         .payment-modal {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.8); z-index: 3000; display: none; align-items: center; justify-content: center;
@@ -358,27 +347,23 @@
         .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.4rem; cursor: pointer; }
         .qr-placeholder { width: 180px; height: 180px; background: #fafafa; margin: 20px auto; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--gold-mid); }
 
-        /* LIGHTBOX FOR PORTFOLIO IMAGES */
         .lightbox-panel {
             position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:4000; display:none; align-items:center; justify-content:center;
         }
         .lightbox-img { max-width: 90%; max-height: 80vh; border: 2px solid #fff; }
         .close-lightbox { position:absolute; top:25px; right:35px; color:#fff; font-size:2.2rem; cursor:pointer; }
 
-        /* LEGAL LEGAL CONTENT PAGE */
         .legal-container { background: #fff; padding: 45px; border: 1px solid #e0e0e0; }
         .legal-container h3 { margin: 30px 0 10px 0; font-size: 1.3rem; color: var(--bg-dark); }
         .legal-container p, .legal-container ul { color: #555; font-size: 0.95rem; margin-bottom: 15px; }
         .legal-container ul { padding-left: 20px; }
 
-        /* FLOATING COMMUNICATIONS INTERFACES */
         .floating-hud { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 12px; z-index: 2500; }
         .hud-circle { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: var(--transition); text-decoration: none; }
         .hud-circle.wa-hud { background: #25d366; }
         .hud-circle.call-hud { background: #007bff; }
         .hud-circle:hover { transform: scale(1.1); }
 
-        /* COMPLIANCE DEEP FOOTER */
         footer { background: var(--bg-dark); color: var(--pure-white); padding: 80px 0 35px 0; font-size: 0.85rem; }
         .footer-matrix { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; margin-bottom: 40px; }
         .footer-column h4 { color: var(--gold-mid); font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; }
@@ -844,13 +829,13 @@
         }
 
         // ==========================================
-        // FIXED RAZORPAY INTEGRATION MODULE
+        // AUTO-DETECT ENGINE WITH NEW KEY ID
         // ==========================================
         function startRazorpayPayment(packageName, amountInRupees) {
             const amountInPaise = amountInRupees * 100;
 
             const options = {
-                "key": "rzp_test_SxUp1xy43dWh7C", 
+                "key": "rzp_test_SxVIRGTh5tJVat", // तुम्हारी बिल्कुल नई Key ID यहाँ एकदम सही जगह फिट कर दी है भाई 
                 "amount": amountInPaise,
                 "currency": "INR",
                 "name": "MRRITEEK STUDIO",
@@ -860,7 +845,7 @@
                     alert("बधाई हो भाई! पेमेंट सफल रहा।\nPayment ID: " + response.razorpay_payment_id);
                 },
                 "prefill": {
-                    "name": "Test User", 
+                    "name": "Customer", 
                     "email": "mrriteek82@gmail.com", 
                     "contact": "9999999999" 
                 },
