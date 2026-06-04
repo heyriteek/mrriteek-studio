@@ -569,7 +569,7 @@
                             <li><i class="fa-solid fa-check"></i> 2 Complete Layout Iterations</li>
                             <li><i class="fa-solid fa-check"></i> 48-Hour Standard Delivery Window</li>
                         </ul>
-                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <button onclick="startRazorpayPayment('Basic Package', 999)" class="btn-luxury" style="width:100%">Secure Order</button>
                     </div>
                     <div class="price-container best-seller">
                         <div class="seller-label">Most Requested</div>
@@ -581,7 +581,7 @@
                             <li><i class="fa-solid fa-check"></i> 5 Dedicated File Re-Edits</li>
                             <li><i class="fa-solid fa-check"></i> Source Asset Delivery Protection (.AI/.PSD)</li>
                         </ul>
-                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <button onclick="startRazorpayPayment('Standard Tier', 2499)" class="btn-luxury" style="width:100%">Secure Order</button>
                     </div>
                     <div class="price-container">
                         <h3>Premium Studio</h3>
@@ -592,7 +592,7 @@
                             <li><i class="fa-solid fa-check"></i> Infinite Development Adjustments</li>
                             <li><i class="fa-solid fa-check"></i> 24-Hour Urgent Processing Route</li>
                         </ul>
-                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <button onclick="startRazorpayPayment('Premium Package', 4999)" class="btn-luxury" style="width:100%">Secure Order</button>
                     </div>
                 </div>
             </div>
@@ -620,7 +620,7 @@
     <div id="contact" class="view-panel">
         <section class="section-space">
             <div class="container">
-                <h2 class="pro-title text-center">Initiate Your <span>Commission</span></h2>
+                <h2 class="pro-title text-center">Initiate Your <span>Project</span></h2>
                 <p class="pro-subtitle text-center">Connect directly with Riteek Kumar's studio helpdesk</p>
                 <div class="contact-layout">
                     <div class="contact-meta">
@@ -761,6 +761,8 @@
         <a href="tel:+91XXXXXXXXXX" class="hud-circle call-hud" title="Direct Telephone Line"><i class="fa-solid fa-phone"></i></a>
     </div>
 
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
     <script>
         // Mobile Drawer Dynamic Toggle Close Module
         const drawerTrigger = document.getElementById('drawerTrigger');
@@ -851,6 +853,37 @@
             event.preventDefault();
             alert("Design brief parsed successfully. Director Riteek Kumar has captured your project layout parameters. An official quote framework will hit your email within 4 hours.");
             event.target.reset();
+        }
+
+        // ==========================================
+        // RAZORPAY GATEWAY DETECT INTERACTION SYSTEM
+        // ==========================================
+        function startRazorpayPayment(packageName, amountInRupees) {
+            // Amount scaling setup into paise module
+            const amountInPaise = amountInRupees * 100;
+
+            const options = {
+                "key": "rzp_test_5xUIcigB5jUmiL", 
+                "amount": amountInPaise,
+                "currency": "INR",
+                "name": "MRRITEEK STUDIO",
+                "description": "Payment submission tracking for " + packageName,
+                "image": "https://heyriteek.github.io/mrriteek-studio/logo.png",
+                "handler": function (response) {
+                    alert("बधाई हो भाई! पेमेंट सफल रहा।\nPayment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "", 
+                    "email": "mrriteek82@gmail.com", 
+                    "contact": "" 
+                },
+                "theme": {
+                    "color": "#d4af37" 
+                }
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
         }
     </script>
 </body>
