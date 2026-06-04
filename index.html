@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRRITEEK Digital Cards & Design Studio | Luxury Event Invitations</title>
+    <meta name="description" content="Premium Digital Invitation Cards, Luxury Wedding Video Invites, Smart QR Menu Cards, and Corporate Graphic Design by Riteek Kumar.">
+    <meta name="keywords" content="Digital Invitation Card, Wedding Card Design, QR Menu Jharkhand, MrRiTeek Design, Palamu Graphic Designer">
+    <meta name="author" content="Riteek Kumar">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "MRRITEEK Digital Cards & Design Studio",
+      "image": "https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=600",
+      "founder": {
+        "@type": "Person",
+        "name": "Riteek Kumar"
+      },
+      "email": "mrriteek82@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kutmu",
+        "addressLocality": "Palamu",
+        "addressRegion": "Jharkhand",
+        "postalCode": "822124",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹499 - ₹4999"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold-light: #fbf5b7;
+            --gold-mid: #d4af37;
+            --gold-dark: #aa7c11;
+            --gold-grad: linear-gradient(135deg, #b38728 0%, #fbf5b7 50%, #daa520 100%);
+            --bg-dark: #0b0c10;
+            --text-white: #ffffff;
+            --text-dark: #111111;
+            --text-muted: #777777;
+            --pure-white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4, .brand-name {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-space { padding: 100px 0; }
+        .text-center { text-align: center; }
+
+        .pro-title {
+            font-size: 2.6rem;
+            color: var(--bg-dark);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .pro-title span {
+            background: var(--gold-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pro-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--gold-grad);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-luxury:hover {
+            background: transparent;
+            color: var(--gold-mid);
+            border-color: var(--gold-mid);
+            transform: translateY(-5px);
+            box-shadow: none;
+        }
+
+        /* PREMIUM HEADER NAV */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #eaeaea;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo-block {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .brand-title { display: flex; flex-direction: column; }
+        .brand-name { font-size: 1.3rem; font-weight: 900; color: var(--bg-dark); line-height: 1.1; }
+        .brand-sub { font-size: 0.6rem; color: var(--gold-dark); letter-spacing: 3px; text-transform: uppercase; font-weight: 700; }
+
+        .menu-list { display: flex; list-style: none; gap: 25px; }
+        .menu-link {
+            color: var(--bg-dark);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .menu-link:hover, .menu-link.active-nav { color: var(--gold-mid); }
+        .hamburger { display: none; font-size: 1.4rem; cursor: pointer; color: var(--bg-dark); }
+
+        /* SPA PAGES VIEWS */
+        .view-panel { display: none; padding-top: 90px; animation: fadeIn 0.5s ease; }
+        .view-panel.active-panel { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* HERO ZONE */
+        .hero-banner {
+            background: linear-gradient(135deg, #0f1016 0%, #1c1d24 100%);
+            padding: 140px 0;
+            text-align: center;
+            color: var(--text-white);
+            border-bottom: 4px solid var(--gold-mid);
+        }
+
+        .hero-banner h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+
+        .hero-banner h1 span {
+            background: var(--gold-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-banner p {
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin: 0 auto 45px auto;
+            color: #b0b3b8;
+            font-weight: 300;
+        }
+
+        /* GRID SYSTEM */
+        .pro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* STUDIO CARD DESIGN */
+        .studio-card {
+            background: var(--pure-white);
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .studio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-premium);
+            border-color: var(--gold-mid);
+        }
+
+        .card-img-box {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .studio-card:hover .card-img-box img { transform: scale(1.06); }
+
+        .card-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(11, 12, 16, 0.8);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: var(--transition);
+        }
+
+        .studio-card:hover .card-overlay { opacity: 1; }
+        
+        .zoom-btn {
+            width: 50px; height: 50px;
+            background: var(--gold-grad);
+            color: var(--text-dark);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; cursor: pointer;
+        }
+
+        .card-details { padding: 20px; text-align: center; background: #fff; }
+        .card-details h3 { font-size: 1.15rem; color: var(--bg-dark); margin-bottom: 6px; }
+        .card-details p { color: var(--gold-dark); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* PORTFOLIO FILTER */
+        .filter-strip {
+            display: flex; justify-content: center; gap: 12px; margin-bottom: 50px; flex-wrap: wrap;
+        }
+
+        .filter-node {
+            padding: 10px 24px; background: #fff; border: 1px solid #dcdcdc;
+            text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 600;
+            cursor: pointer; transition: var(--transition);
+        }
+
+        .filter-node.active-node, .filter-node:hover {
+            background: var(--bg-dark); color: var(--pure-white); border-color: var(--bg-dark);
+        }
+
+        /* WHY US DECK */
+        .why-billboard { background: #111215; color: #fff; border-top: 5px solid var(--gold-mid); }
+        .feature-box { text-align: center; padding: 30px 15px; }
+        .feature-box i { font-size: 2.5rem; color: var(--gold-mid); margin-bottom: 20px; }
+        .feature-box h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--pure-white); }
+        .feature-box p { color: #a0a0a5; font-size: 0.9rem; }
+
+        /* PRICING SYSTEM */
+        .price-container {
+            background: #fff; border: 1px solid #e0e0e0; padding: 50px 35px; position: relative; transition: var(--transition);
+        }
+
+        .price-container.best-seller { border: 3px solid var(--gold-mid); }
+        .seller-label {
+            position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
+            background: var(--gold-grad); color: var(--text-dark); padding: 5px 18px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .price-container h3 { font-size: 1.5rem; color: var(--bg-dark); margin-bottom: 10px; }
+        .price-rate { font-size: 2.8rem; font-weight: 900; color: var(--bg-dark); margin-bottom: 25px; }
+        .price-rate span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
+        
+        .feature-list { list-style: none; margin-bottom: 35px; text-align: left; }
+        .feature-list li { padding: 10px 0; border-bottom: 1px solid #f9f9f9; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+        .feature-list li i { color: var(--gold-mid); }
+
+        /* FAQ ACCORDION */
+        .accordion-max { max-width: 800px; margin: 0 auto; }
+        .acc-node { background: #fff; border: 1px solid #e0e0e0; margin-bottom: 15px; }
+        .acc-head { padding: 22px; font-weight: 600; font-size: 0.95rem; color: var(--bg-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .acc-body { padding: 0 22px; max-height: 0; overflow: hidden; transition: var(--transition); color: #666; font-size: 0.9rem; }
+        .acc-node.active-acc .acc-body { padding: 0 22px 22px 22px; max-height: 200px; }
+        .acc-node.active-acc { border-color: var(--gold-mid); }
+
+        /* CONTACT SYSTEM */
+        .contact-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; }
+        .contact-meta { display: flex; flex-direction: column; gap: 35px; }
+        .meta-tile { display: flex; gap: 15px; }
+        .meta-tile i { font-size: 1.4rem; color: var(--gold-mid); background: #f4f4f4; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+        .meta-tile h4 { font-size: 1rem; margin-bottom: 4px; text-transform: uppercase; }
+        .meta-tile p { color: var(--text-muted); font-size: 0.9rem; }
+
+        .studio-form { background: #fff; padding: 40px; border: 1px solid #e0e0e0; box-shadow: var(--shadow-premium); }
+        .input-row { margin-bottom: 20px; }
+        .input-row label { display: block; margin-bottom: 8px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .form-input { width: 100%; padding: 14px; border: 1px solid #cbd5e1; background: #fafafa; outline: none; font-size: 0.95rem; }
+        .form-input:focus { border-color: var(--bg-dark); background: #fff; }
+
+        /* PAYMENT POPUP (UPI) */
+        .payment-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 3000; display: none; align-items: center; justify-content: center;
+        }
+        .modal-box { background: #fff; padding: 45px 30px; text-align: center; max-width: 400px; width: 100%; border-top: 5px solid var(--gold-mid); position: relative; }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.4rem; cursor: pointer; }
+        .qr-placeholder { width: 180px; height: 180px; background: #fafafa; margin: 20px auto; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--gold-mid); }
+
+        /* LIGHTBOX FOR PORTFOLIO IMAGES */
+        .lightbox-panel {
+            position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:4000; display:none; align-items:center; justify-content:center;
+        }
+        .lightbox-img { max-width: 90%; max-height: 80vh; border: 2px solid #fff; }
+        .close-lightbox { position:absolute; top:25px; right:35px; color:#fff; font-size:2.2rem; cursor:pointer; }
+
+        /* LEGAL LEGAL CONTENT PAGE */
+        .legal-container { background: #fff; padding: 45px; border: 1px solid #e0e0e0; }
+        .legal-container h3 { margin: 30px 0 10px 0; font-size: 1.3rem; color: var(--bg-dark); }
+        .legal-container p, .legal-container ul { color: #555; font-size: 0.95rem; margin-bottom: 15px; }
+        .legal-container ul { padding-left: 20px; }
+
+        /* FLOATING COMMUNICATIONS INTERFACES */
+        .floating-hud { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 12px; z-index: 2500; }
+        .hud-circle { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: var(--transition); text-decoration: none; }
+        .hud-circle.wa-hud { background: #25d366; }
+        .hud-circle.call-hud { background: #007bff; }
+        .hud-circle:hover { transform: scale(1.1); }
+
+        /* COMPLIANCE DEEP FOOTER */
+        footer { background: var(--bg-dark); color: var(--pure-white); padding: 80px 0 35px 0; font-size: 0.85rem; }
+        .footer-matrix { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; border-bottom: 1px solid #222; padding-bottom: 40px; margin-bottom: 40px; }
+        .footer-column h4 { color: var(--gold-mid); font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #b0b3b8; text-decoration: none; transition: var(--transition); cursor: pointer; }
+        .footer-column ul li a:hover { color: var(--gold-mid); padding-left: 4px; }
+        .footer-base { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; color: #666; }
+
+        @media (max-width: 968px) {
+            .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+            .hero-banner h1 { font-size: 2.6rem; }
+            .hamburger { display: block; }
+            .menu-list {
+                position: absolute; top: 90px; left: -100%; width: 100%; background: #fff;
+                flex-direction: column; align-items: center; padding: 40px 0; gap: 25px;
+                border-bottom: 1px solid #eaeaea; transition: var(--transition); box-shadow: var(--shadow-premium);
+            }
+            .menu-list.active-drawer { left: 0; }
+            .footer-matrix { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-matrix { grid-template-columns: 1fr; }
+            .footer-base { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a onclick="toggleView('home')" class="logo-block">
+                <div class="logo-icon">M</div>
+                <div class="brand-title">
+                    <span class="brand-name">MRRITEEK</span>
+                    <span class="brand-sub">Cards & Design Studio</span>
+                </div>
+            </a>
+            <div class="hamburger" id="drawerTrigger"><i class="fa-solid fa-bars"></i></div>
+            <ul class="menu-list" id="drawerMenu">
+                <li><a onclick="toggleView('home')" class="menu-link active-nav" data-view="home">Home</a></li>
+                <li><a onclick="toggleView('about')" class="menu-link" data-view="about">About Us</a></li>
+                <li><a onclick="toggleView('services')" class="menu-link" data-view="services">Services</a></li>
+                <li><a onclick="toggleView('portfolio')" class="menu-link" data-view="portfolio">Portfolio</a></li>
+                <li><a onclick="toggleView('pricing')" class="menu-link" data-view="pricing">Pricing</a></li>
+                <li><a onclick="toggleView('faq')" class="menu-link" data-view="faq">FAQ</a></li>
+                <li><a onclick="toggleView('contact')" class="menu-link" data-view="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="home" class="view-panel active-panel">
+        <section class="hero-banner">
+            <div class="container">
+                <h1>Where Luxury Meets <span>Digital Artistry</span></h1>
+                <p>Crafting elite dynamic wedding cards, premium milestone invites, and modern interactive menu layouts for clients who demand pure elegance.</p>
+                <a onclick="toggleView('portfolio')" class="btn-luxury">View Signature Collection</a>
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Featured <span>Exhibits</span></h2>
+                <p class="pro-subtitle text-center">Handcrafted premium aesthetic layouts</p>
+                <div class="pro-grid">
+                    <div class="studio-card">
+                        <div class="card-img-box">
+                            <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=500" alt="Royal Wedding Theme">
+                            <div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1000')"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+                        </div>
+                        <div class="card-details"><h3>The Imperial Mandala</h3><p>Royal Wedding Suite</p></div>
+                    </div>
+                    <div class="studio-card">
+                        <div class="card-img-box">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=500" alt="Birthday Invite Design">
+                            <div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1000')"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+                        </div>
+                        <div class="card-details"><h3>Luxury Gold Confetti</h3><p>Elite Birthday Framework</p></div>
+                    </div>
+                    <div class="studio-card">
+                        <div class="card-img-box">
+                            <img src="https://images.unsplash.com/photo-1546135060-7c41d51d3627?q=80&w=500" alt="Restaurant QR Menu Layout">
+                            <div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1546135060-7c41d51d3627?q=80&w=1000')"><i class="fa-solid fa-magnifying-glass"></i></div></div>
+                        </div>
+                        <div class="card-details"><h3>Minimalist Smart QR</h3><p>Interactive Restaurant Menu</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-space why-billboard">
+            <div class="container">
+                <h2 class="pro-title text-center" style="color:#fff">Engineered For <span>Perfection</span></h2>
+                <p class="pro-subtitle text-center">Why top brands trust our design execution templates</p>
+                <div class="pro-grid">
+                    <div class="feature-box"><i class="fa-solid fa-crown"></i><h3>Bespoke Concepts</h3><p>Zero generic presets. Every vector canvas is layered perfectly from scratch to match individual tastes.</p></div>
+                    <div class="feature-box"><i class="fa-solid fa-mobile-screen"></i><h3>100% Fluid Scaling</h3><p>Engineered to load crisply with instant adjustments across WhatsApp, iOS, and Android device ecosystems.</p></div>
+                    <div class="feature-box"><i class="fa-solid fa-location-dot"></i><h3>Interactive Asset Linking</h3><p>Embed seamless Google Map coordinates, direct RSVP triggers, and music links right inside.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="about" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Our Creative <span>Legacy</span></h2>
+                <p class="pro-subtitle text-center">High-end design blueprints managed with professional focus</p>
+                <div class="legal-container">
+                    <p>Owned and directed exclusively by chief digital artist <strong>Riteek Kumar</strong> from **Kutmu, Palamu, Jharkhand**, **MRRITEEK Digital Cards & Design Studio** builds high-end design variables.</p>
+                    <p>We treat every client brief as an accurate blueprint of human communication art. Merging classic typography balance with contemporary vector design systems, we formulate timeless virtual tokens for life's biggest milestones.</p>
+                    <h3>The Creative Mission</h3>
+                    <p>To deliver pure class and premium structural composition into customized virtual stationery layouts, eliminating generic design layouts completely.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="services" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Studio <span>Capabilities</span></h2>
+                <p class="pro-subtitle text-center">Bespoke graphic services engineered with elite quality metrics</p>
+                <div class="pro-grid">
+                    <div class="studio-card" style="padding:35px; text-align:center;">
+                        <i class="fa-solid fa-ring style-icon" style="font-size:2.4rem; color:var(--gold-mid); margin-bottom:15px;"></i>
+                        <h3 style="margin-bottom:10px;">Ceremonial Invitation Suites</h3>
+                        <p style="font-size:0.85rem; color:var(--text-muted)">Royal Wedding Invitations, modern Engagement cards, elegant Reception announcements, and memorable Anniversary frames built with custom color profiles.</p>
+                    </div>
+                    <div class="studio-card" style="padding:35px; text-align:center;">
+                        <i class="fa-solid fa-cake-candles style-icon" style="font-size:2.4rem; color:var(--gold-mid); margin-bottom:15px;"></i>
+                        <h3 style="margin-bottom:10px;">Milestone Family Graphics</h3>
+                        <p style="font-size:0.85rem; color:var(--text-muted)">Beautiful Baby Shower announcements, traditional Naming Ceremony cards, and clean House Warming vector invitations.</p>
+                    </div>
+                    <div class="studio-card" style="padding:35px; text-align:center;">
+                        <i class="fa-solid fa-qrcode style-icon" style="font-size:2.4rem; color:var(--gold-mid); margin-bottom:15px;"></i>
+                        <h3 style="margin-bottom:10px;">Smart QR Restaurant Menus</h3>
+                        <p style="font-size:0.85rem; color:var(--text-muted)">Modern interactive Digital Menu Cards, ultra-premium restaurant print menu templates, and seamless scan-to-view QR solutions.</p>
+                    </div>
+                    <div class="studio-card" style="padding:35px; text-align:center;">
+                        <i class="fa-solid fa-gem style-icon" style="font-size:2.4rem; color:var(--gold-mid); margin-bottom:15px;"></i>
+                        <h3 style="margin-bottom:10px;">Custom Graphics Suite</h3>
+                        <p style="font-size:0.85rem; color:var(--text-muted)">Artisanal corporate Vector Logos, modern sleek Business/Visiting Cards, tactical digital Flyer designs, and luxury multi-page commercial Brochure canvases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="portfolio" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">The Curated <span>Showroom</span></h2>
+                <p class="pro-subtitle text-center">Examine premium layout blueprints sorted cleanly</p>
+                
+                <div class="filter-strip">
+                    <div class="filter-node active-node" onclick="executeFilter('all')">All Showcases</div>
+                    <div class="filter-node" onclick="executeFilter('wedding')">Wedding</div>
+                    <div class="filter-node" onclick="executeFilter('birthday')">Birthday</div>
+                    <div class="filter-node" onclick="executeFilter('menu')">Menu Layouts</div>
+                    <div class="filter-node" onclick="executeFilter('corporate')">Business Cards</div>
+                </div>
+
+                <div class="pro-grid" id="showroomCoreGrid">
+                    <div class="studio-card filter-target" data-category="wedding"><div class="card-img-box"><img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=500"><div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1000')"><i class="fa-solid fa-eye"></i></div></div></div><div class="card-details"><h3>Royal Maharaja Suite</h3><p>Wedding Card</p></div></div>
+                    <div class="studio-card filter-target" data-category="wedding"><div class="card-img-box"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=500"><div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000')"><i class="fa-solid fa-eye"></i></div></div></div><div class="card-details"><h3>Blush Rose Minimal</h3><p>Engagement Card</p></div></div>
+                    <div class="studio-card filter-target" data-category="birthday"><div class="card-img-box"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=500"><div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1000')"><i class="fa-solid fa-eye"></i></div></div></div><div class="card-details"><h3>Gilded Midnight Stars</h3><p>Birthday Celebration</p></div></div>
+                    <div class="studio-card filter-target" data-category="menu"><div class="card-img-box"><img src="https://images.unsplash.com/photo-1546135060-7c41d51d3627?q=80&w=500"><div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1546135060-7c41d51d3627?q=80&w=1000')"><i class="fa-solid fa-eye"></i></div></div></div><div class="card-details"><h3>Fine-Dine Touch Interactive</h3><p>QR Restaurant Menu</p></div></div>
+                    <div class="studio-card filter-target" data-category="corporate"><div class="card-img-box"><img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=500"><div class="card-overlay"><div class="zoom-btn" onclick="openLightbox('https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=1000')"><i class="fa-solid fa-eye"></i></div></div></div><div class="card-details"><h3>Slate Premium Identity</h3><p>Business Card</p></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="pricing" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Project <span>Packages</span></h2>
+                <p class="pro-subtitle text-center">Clear itemized rates matching standard payment gateway guidelines</p>
+                <div class="pro-grid">
+                    <div class="price-container">
+                        <h3>Basic Suite</h3>
+                        <div class="price-rate">₹999<span> / fixed</span></div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> Premium Single-Page Invite Frame</li>
+                            <li><i class="fa-solid fa-check"></i> High Resolution Print-Ready Format</li>
+                            <li><i class="fa-solid fa-check"></i> 2 Complete Layout Iterations</li>
+                            <li><i class="fa-solid fa-check"></i> 48-Hour Standard Delivery Window</li>
+                        </ul>
+                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                    </div>
+                    <div class="price-container best-seller">
+                        <div class="seller-label">Most Requested</div>
+                        <h3>Standard Tier</h3>
+                        <div class="price-rate">₹2,499<span> / fixed</span></div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> Multi-Page Cohesive Storyboard Cards</li>
+                            <li><i class="fa-solid fa-check"></i> Map Links, Social Assets & Background Audio</li>
+                            <li><i class="fa-solid fa-check"></i> 5 Dedicated File Re-Edits</li>
+                            <li><i class="fa-solid fa-check"></i> Source Asset Delivery Protection (.AI/.PSD)</li>
+                        </ul>
+                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                    </div>
+                    <div class="price-container">
+                        <h3>Premium Studio</h3>
+                        <div class="price-rate">₹4,999<span> / fixed</span></div>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> 100% Bespoke Signature Layout blue-print</li>
+                            <li><i class="fa-solid fa-check"></i> Fully Interactive QR Live Portal Card</li>
+                            <li><i class="fa-solid fa-check"></i> Infinite Development Adjustments</li>
+                            <li><i class="fa-solid fa-check"></i> 24-Hour Urgent Processing Route</li>
+                        </ul>
+                        <button onclick="launchPaymentWindow()" class="btn-luxury" style="width:100%">Secure Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="faq" class="view-panel">
+        <section class="section-space">
+            <div class="container accordion-max">
+                <h2 class="pro-title text-center">Inquiries <span>Resolved</span></h2>
+                <p class="pro-subtitle text-center">Clear transactional steps for customer transparency</p>
+                
+                <div class="acc-node">
+                    <div class="acc-head">How do I submit text assets and event logistics? <i class="fa-solid fa-plus"></i></div>
+                    <div class="acc-body"><p>Once booking confirmation clears over our UPI network endpoint, our operations desk reaches out via WhatsApp or email to share a secure structured content template. You can fill in schedules, location links, family details, and media files there easily.</p></div>
+                </div>
+                <div class="acc-node">
+                    <div class="acc-head">What happens if our event plans get modified later? <i class="fa-solid fa-plus"></i></div>
+                    <div class="acc-body"><p>We maintain full project layout backups for up to 90 days. If date parameters shift or spellings need adjustment within this window, updates can be swiftly integrated for a minimal revision fee.</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="contact" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Initiate Your <span>Commission</span></h2>
+                <p class="pro-subtitle text-center">Connect directly with Riteek Kumar's studio helpdesk</p>
+                <div class="contact-layout">
+                    <div class="contact-meta">
+                        <div class="meta-tile"><i class="fa-solid fa-envelope"></i><div><h4>Official Electronic Mail</h4><p>mrriteek82@gmail.com</p></div></div>
+                        <div class="meta-tile"><i class="fa-solid fa-location-dot"></i><div><h4>Studio Headquarters</h4><p>Kutmu, Palamu, Jharkhand - 822124, India</p></div></div>
+                        <div class="meta-tile"><i class="fa-solid fa-wallet"></i><div><h4>Secure Settlement Point</h4><p>UPI ID: riteek.kumar@ybl</p></div></div>
+                    </div>
+                    <form class="studio-form" onsubmit="processFormSubmission(event)">
+                        <div class="input-row"><label>Full Legal Representative Name</label><input type="text" class="form-input" required placeholder="E.g., Amit Kumar"></div>
+                        <div class="input-row"><label>Active Contact Email</label><input type="email" class="form-input" required placeholder="name@domain.com"></div>
+                        <div class="input-row"><label>Design Scope Classification</label>
+                            <select class="form-input" style="height:54px; background:#fafafa;">
+                                <option>Premium Wedding Invitation Suite</option>
+                                <option>Custom Celebration Card Layout</option>
+                                <option>Interactive Restaurant Menu Solution</option>
+                                <option>Corporate Brand Identity / Logo Vector</option>
+                            </select>
+                        </div>
+                        <div class="input-row"><label>Project Brief Parameters</label><textarea class="form-input" rows="4" placeholder="Detail color choices, theme preferences or delivery targets..."></textarea></div>
+                        <button type="submit" class="btn-luxury" style="width:100%">Dispatch Project Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="privacy" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Privacy <span>Charter</span></h2>
+                <div class="legal-container">
+                    <p><strong>Effective Date:</strong> June 04, 2026</p>
+                    <p>At MRRITEEK Digital Cards & Design Studio, client data safety is an absolute priority. This charter outlines our data processing rules.</p>
+                    <h3>1. Gathering Personal & Event Information</h3>
+                    <p>We collect essential communication data, including names, emails, addresses, and family event logistics, solely to fulfill customized design briefs.</p>
+                    <h3>2. Data Sale & Transfer Restraints</h3>
+                    <p>We do not sell, rent, or lease customer names, numbers, or private media files to external advertising bodies or tracking databases.</p>
+                    <h3>3. High-Grade Transaction Shielding</h3>
+                    <p>All pricing transactions clear safely through direct encrypted merchant tools. No credit card records, pin tokens, or private banking details are processed or logged within our code files.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="refund" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Refund <span>Framework</span></h2>
+                <div class="legal-container">
+                    <p><strong>Effective Date:</strong> June 04, 2026</p>
+                    <p>Please review our studio refund policies before securing a custom design package:</p>
+                    <h3>1. Quality Evaluation Protocols</h3>
+                    <p>If any technical formatting errors or file corruption glitches are found, a formal report must be sent to our desk. All valid claims undergo automated manual review within **7 working days** from lodging.</p>
+                    <h3>2. Delivered Custom Asset Clause</h3>
+                    <p>Because bespoke typography mapping, creative color composition, and vector asset generation consume dedicated expert billable hours right from project kickoff, **custom digital designs already delivered are entirely non-refundable**.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="terms" class="view-panel">
+        <section class="section-space">
+            <div class="container">
+                <h2 class="pro-title text-center">Terms of <span>Service</span></h2>
+                <div class="legal-container">
+                    <p><strong>Effective Date:</strong> June 04, 2026</p>
+                    <p>Welcome to MRRITEEK Digital Cards & Design Studio. Engaging our production lines constitutes complete agreement with these parameters:</p>
+                    <h3>1. Content Accuracy Mandate</h3>
+                    <p>Clients are solely responsible for ensuring that all spelling variants, schedules, maps, and media coordinates delivered to our design desk are completely accurate and do not breach third-party copyright laws.</p>
+                    <h3>2. Retainer Processing Schedules</h3>
+                    <p>Bespoke artwork design begins systematically only after a clear package token settles over our verified UPI merchant lines. Full file packages clear handover steps once outstanding balances are resolved.</p>
+                    <h3>3. Governing Statutes</h3>
+                    <p>These service conditions are governed fully in accordance with regional regulations within <strong>Jharkhand, India</strong>. Any dispute falls under local courts exclusively.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-matrix">
+                <div class="footer-column">
+                    <h4 style="color:#fff">MRRITEEK STUDIO</h4>
+                    <p style="color:#777; line-height:1.7; margin-top:10px;">Luxury digital invitations, interactive restaurant QR systems, and elite brand identity frameworks engineered with high performance under the management of Riteek Kumar.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Studio Focus</h4>
+                    <ul>
+                        <li><a onclick="toggleView('services')">Wedding Suites</a></li>
+                        <li><a onclick="toggleView('services')">Smart QR Menus</a></li>
+                        <li><a onclick="toggleView('services')">Corporate Graphics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a onclick="toggleView('about')">Our Narrative</a></li>
+                        <li><a onclick="toggleView('portfolio')">The Showroom</a></li>
+                        <li><a onclick="toggleView('pricing')">Tiers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal & Trust</h4>
+                    <ul>
+                        <li><a onclick="toggleView('privacy')">Privacy Charter</a></li>
+                        <li><a onclick="toggleView('refund')">Refund Framework</a></li>
+                        <li><a onclick="toggleView('terms')">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-base">
+                <p>© 2026 MRRITEEK Digital Cards & Design Studio. All Rights Reserved. Owner: Riteek Kumar | Kutmu, Palamu, Jharkhand - 822124.</p>
+                <p style="color:var(--gold-mid); letter-spacing:1px;"><i class="fa-solid fa-shield-halved"></i> 100% Secured UPI Interface Active</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="payment-modal" id="paymentPopupModule">
+        <div class="modal-box">
+            <div class="close-modal" onclick="closePaymentWindow()"><i class="fa-solid fa-xmark"></i></div>
+            <h3 style="margin-bottom:10px;">Secure Studio Checkpoint</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted)">Scan via any preferred UPI application to confirm your package booking instantly.</p>
+            <div class="qr-placeholder">
+                 <div style="text-align:center;"><i class="fa-solid fa-qrcode" style="font-size:2.8rem; color:var(--gold-mid); margin-bottom:10px;"></i><br><span style="font-size:0.85rem; font-weight:600">riteek.kumar@ybl</span></div>
+            </div>
+            <p style="font-size:0.85rem; font-weight:700; background:#f4f4f4; padding:10px; border-radius:4px;">UPI: riteek.kumar@ybl</p>
+            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:15px;"><i class="fa-solid fa-lock"></i> Secured under NPCI Trust Guidelines</p>
+        </div>
+    </div>
+
+    <div class="lightbox-panel" id="lightboxPlatform" onclick="closeLightbox()">
+        <div class="close-lightbox"><i class="fa-solid fa-xmark"></i></div>
+        <img src="" class="lightbox-img" id="lightboxTargetMedia">
+    </div>
+
+    <div class="floating-hud">
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Riteek,%20I%20am%20interested%20in%20your%20premium%20digital%20card%20services." target="_blank" class="hud-circle wa-hud" title="Connect over Live WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+91XXXXXXXXXX" class="hud-circle call-hud" title="Direct Telephone Line"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <script>
+        // Mobile Drawer Dynamic Toggle Close Module
+        const drawerTrigger = document.getElementById('drawerTrigger');
+        const drawerMenu = document.getElementById('drawerMenu');
+
+        drawerTrigger.addEventListener('click', () => {
+            drawerMenu.classList.toggle('active-drawer');
+            const iconElement = drawerTrigger.querySelector('i');
+            iconElement.classList.toggle('fa-bars');
+            iconElement.classList.toggle('fa-xmark');
+        });
+
+        // SPA Navigation Views Logic Engine
+        function toggleView(targetViewPanelId) {
+            // Dismiss drawer on mobile layout
+            drawerMenu.classList.remove('active-drawer');
+            const toggleIcon = drawerTrigger.querySelector('i');
+            if(toggleIcon.classList.contains('fa-xmark')) {
+                toggleIcon.classList.add('fa-bars');
+                toggleIcon.classList.remove('fa-xmark');
+            }
+
+            // Collapse All Panels
+            const panels = document.querySelectorAll('.view-panel');
+            panels.forEach(p => p.classList.remove('active-panel'));
+
+            // Display Active Page Target
+            const targetActivePanel = document.getElementById(targetViewPanelId);
+            if(targetActivePanel) targetActivePanel.classList.add('active-panel');
+
+            // Sync Nav Highlights
+            const menuLinks = document.querySelectorAll('.menu-link');
+            menuLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if(link.getAttribute('data-view') === targetViewPanelId) link.classList.add('active-nav');
+            });
+
+            // Reset focus position safely to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Live Dynamic Showroom Category Filter Logic
+        function executeFilter(categoryStringKey) {
+            const nodes = document.querySelectorAll('.filter-node');
+            nodes.forEach(node => {
+                node.classList.remove('active-node');
+                if(node.getAttribute('onclick').includes(categoryStringKey)) node.classList.add('active-node');
+            });
+
+            const cards = document.querySelectorAll('#showroomCoreGrid .filter-target');
+            cards.forEach(card => {
+                if(categoryStringKey === 'all' || card.getAttribute('data-category') === categoryStringKey) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightweight FAQ Collapsible Triggers
+        const heads = document.querySelectorAll('.acc-head');
+        heads.forEach(head => {
+            head.addEventListener('click', () => {
+                const node = head.parentElement;
+                node.classList.toggle('active-acc');
+                const chevronIcon = head.querySelector('i');
+                chevronIcon.classList.toggle('fa-plus');
+                chevronIcon.classList.toggle('fa-minus');
+            });
+        });
+
+        // Interactive Modular Popup Triggers
+        const paymentModal = document.getElementById('paymentPopupModule');
+        function launchPaymentWindow() { paymentModal.style.display = 'flex'; }
+        function closePaymentWindow() { paymentModal.style.display = 'none'; }
+
+        // Pro Lightbox System Modules
+        const lightbox = document.getElementById('lightboxPlatform');
+        const lightboxImg = document.getElementById('lightboxTargetMedia');
+        function openLightbox(imageUrlRoute) {
+            lightboxImg.src = imageUrlRoute;
+            lightbox.style.display = 'flex';
+        }
+        function closeLightbox() { lightbox.style.display = 'none'; }
+
+        // Client Form Submission Visual Feedback Hook
+        function processFormSubmission(event) {
+            event.preventDefault();
+            alert("Design brief parsed successfully. Director Riteek Kumar has captured your project layout parameters. An official quote framework will hit your email within 4 hours.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
