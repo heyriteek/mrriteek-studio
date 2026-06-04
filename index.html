@@ -856,14 +856,13 @@
         }
 
         // ==========================================
-        // RAZORPAY GATEWAY DETECT INTERACTION SYSTEM
+        // RAZORPAY GATEWAY INTERACTION SYSTEM (TEST-READY)
         // ==========================================
         function startRazorpayPayment(packageName, amountInRupees) {
-            // Amount scaling setup into paise module
             const amountInPaise = amountInRupees * 100;
 
             const options = {
-                "key": "rzp_test_5xUIcigB5jUmiL", 
+                "key": "rzp_test_SxUp1xy43dWh7C", // न्यू अपडेटेड क्रेडेंशियल की आईडी
                 "amount": amountInPaise,
                 "currency": "INR",
                 "name": "MRRITEEK STUDIO",
@@ -871,6 +870,11 @@
                 "image": "https://heyriteek.github.io/mrriteek-studio/logo.png",
                 "handler": function (response) {
                     alert("बधाई हो भाई! पेमेंट सफल रहा।\nPayment ID: " + response.razorpay_payment_id);
+                },
+                "modal": {
+                    "ondismiss": function(){
+                        alert("Payment cancelled by the user.");
+                    }
                 },
                 "prefill": {
                     "name": "", 
@@ -883,6 +887,12 @@
             };
 
             const rzp = new Razorpay(options);
+            
+            // पेमेंट फ़ेलियर एरर हैंडलिंग
+            rzp.on('payment.failed', function (response){
+                alert("Payment Failed: " + response.error.description);
+            });
+
             rzp.open();
         }
     </script>
