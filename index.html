@@ -764,7 +764,6 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <script>
-        // Mobile Drawer Dynamic Toggle Close Module
         const drawerTrigger = document.getElementById('drawerTrigger');
         const drawerMenu = document.getElementById('drawerMenu');
 
@@ -775,9 +774,7 @@
             iconElement.classList.toggle('fa-xmark');
         });
 
-        // SPA Navigation Views Logic Engine
         function toggleView(targetViewPanelId) {
-            // Dismiss drawer on mobile layout
             drawerMenu.classList.remove('active-drawer');
             const toggleIcon = drawerTrigger.querySelector('i');
             if(toggleIcon.classList.contains('fa-xmark')) {
@@ -785,26 +782,21 @@
                 toggleIcon.classList.remove('fa-xmark');
             }
 
-            // Collapse All Panels
             const panels = document.querySelectorAll('.view-panel');
             panels.forEach(p => p.classList.remove('active-panel'));
 
-            // Display Active Page Target
             const targetActivePanel = document.getElementById(targetViewPanelId);
             if(targetActivePanel) targetActivePanel.classList.add('active-panel');
 
-            // Sync Nav Highlights
             const menuLinks = document.querySelectorAll('.menu-link');
             menuLinks.forEach(link => {
                 link.classList.remove('active-nav');
                 if(link.getAttribute('data-view') === targetViewPanelId) link.classList.add('active-nav');
             });
 
-            // Reset focus position safely to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Live Dynamic Showroom Category Filter Logic
         function executeFilter(categoryStringKey) {
             const nodes = document.querySelectorAll('.filter-node');
             nodes.forEach(node => {
@@ -822,7 +814,6 @@
             });
         }
 
-        // Lightweight FAQ Collapsible Triggers
         const heads = document.querySelectorAll('.acc-head');
         heads.forEach(head => {
             head.addEventListener('click', () => {
@@ -834,12 +825,10 @@
             });
         });
 
-        // Interactive Modular Popup Triggers
         const paymentModal = document.getElementById('paymentPopupModule');
         function launchPaymentWindow() { paymentModal.style.display = 'flex'; }
         function closePaymentWindow() { paymentModal.style.display = 'none'; }
 
-        // Pro Lightbox System Modules
         const lightbox = document.getElementById('lightboxPlatform');
         const lightboxImg = document.getElementById('lightboxTargetMedia');
         function openLightbox(imageUrlRoute) {
@@ -848,7 +837,6 @@
         }
         function closeLightbox() { lightbox.style.display = 'none'; }
 
-        // Client Form Submission Visual Feedback Hook
         function processFormSubmission(event) {
             event.preventDefault();
             alert("Design brief parsed successfully. Director Riteek Kumar has captured your project layout parameters. An official quote framework will hit your email within 4 hours.");
@@ -856,30 +844,25 @@
         }
 
         // ==========================================
-        // RAZORPAY GATEWAY INTERACTION SYSTEM (TEST-READY)
+        // FIXED RAZORPAY INTEGRATION MODULE
         // ==========================================
         function startRazorpayPayment(packageName, amountInRupees) {
             const amountInPaise = amountInRupees * 100;
 
             const options = {
-                "key": "rzp_test_SxUp1xy43dWh7C", // न्यू अपडेटेड क्रेडेंशियल की आईडी
+                "key": "rzp_test_SxUp1xy43dWh7C", 
                 "amount": amountInPaise,
                 "currency": "INR",
                 "name": "MRRITEEK STUDIO",
-                "description": "Payment submission tracking for " + packageName,
+                "description": "Payment for " + packageName,
                 "image": "https://heyriteek.github.io/mrriteek-studio/logo.png",
                 "handler": function (response) {
                     alert("बधाई हो भाई! पेमेंट सफल रहा।\nPayment ID: " + response.razorpay_payment_id);
                 },
-                "modal": {
-                    "ondismiss": function(){
-                        alert("Payment cancelled by the user.");
-                    }
-                },
                 "prefill": {
-                    "name": "", 
+                    "name": "Test User", 
                     "email": "mrriteek82@gmail.com", 
-                    "contact": "" 
+                    "contact": "9999999999" 
                 },
                 "theme": {
                     "color": "#d4af37" 
@@ -887,12 +870,6 @@
             };
 
             const rzp = new Razorpay(options);
-            
-            // पेमेंट फ़ेलियर एरर हैंडलिंग
-            rzp.on('payment.failed', function (response){
-                alert("Payment Failed: " + response.error.description);
-            });
-
             rzp.open();
         }
     </script>
