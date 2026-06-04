@@ -117,6 +117,7 @@
             transition: var(--transition);
             cursor: pointer;
             box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+            text-align: center;
         }
 
         .btn-luxury:hover {
@@ -339,14 +340,6 @@
         .form-input { width: 100%; padding: 14px; border: 1px solid #cbd5e1; background: #fafafa; outline: none; font-size: 0.95rem; }
         .form-input:focus { border-color: var(--bg-dark); background: #fff; }
 
-        .payment-modal {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8); z-index: 3000; display: none; align-items: center; justify-content: center;
-        }
-        .modal-box { background: #fff; padding: 45px 30px; text-align: center; max-width: 400px; width: 100%; border-top: 5px solid var(--gold-mid); position: relative; }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.4rem; cursor: pointer; }
-        .qr-placeholder { width: 180px; height: 180px; background: #fafafa; margin: 20px auto; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--gold-mid); }
-
         .lightbox-panel {
             position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:4000; display:none; align-items:center; justify-content:center;
         }
@@ -554,7 +547,7 @@
                             <li><i class="fa-solid fa-check"></i> 2 Complete Layout Iterations</li>
                             <li><i class="fa-solid fa-check"></i> 48-Hour Standard Delivery Window</li>
                         </ul>
-                        <button onclick="startRazorpayPayment('Basic Package', 999)" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <a href="https://rzp.io/rzp/mrriteekstudio" target="_blank" class="btn-luxury" style="width:100%">Secure Order</a>
                     </div>
                     <div class="price-container best-seller">
                         <div class="seller-label">Most Requested</div>
@@ -566,7 +559,7 @@
                             <li><i class="fa-solid fa-check"></i> 5 Dedicated File Re-Edits</li>
                             <li><i class="fa-solid fa-check"></i> Source Asset Delivery Protection (.AI/.PSD)</li>
                         </ul>
-                        <button onclick="startRazorpayPayment('Standard Tier', 2499)" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <a href="https://rzp.io/rzp/mrriteekstudio" target="_blank" class="btn-luxury" style="width:100%">Secure Order</a>
                     </div>
                     <div class="price-container">
                         <h3>Premium Studio</h3>
@@ -577,7 +570,7 @@
                             <li><i class="fa-solid fa-check"></i> Infinite Development Adjustments</li>
                             <li><i class="fa-solid fa-check"></i> 24-Hour Urgent Processing Route</li>
                         </ul>
-                        <button onclick="startRazorpayPayment('Premium Package', 4999)" class="btn-luxury" style="width:100%">Secure Order</button>
+                        <a href="https://rzp.io/rzp/mrriteekstudio" target="_blank" class="btn-luxury" style="width:100%">Secure Order</a>
                     </div>
                 </div>
             </div>
@@ -723,19 +716,6 @@
         </div>
     </footer>
 
-    <div class="payment-modal" id="paymentPopupModule">
-        <div class="modal-box">
-            <div class="close-modal" onclick="closePaymentWindow()"><i class="fa-solid fa-xmark"></i></div>
-            <h3 style="margin-bottom:10px;">Secure Studio Checkpoint</h3>
-            <p style="font-size:0.85rem; color:var(--text-muted)">Scan via any preferred UPI application to confirm your package booking instantly.</p>
-            <div class="qr-placeholder">
-                 <div style="text-align:center;"><i class="fa-solid fa-qrcode" style="font-size:2.8rem; color:var(--gold-mid); margin-bottom:10px;"></i><br><span style="font-size:0.85rem; font-weight:600">riteek.kumar@ybl</span></div>
-            </div>
-            <p style="font-size:0.85rem; font-weight:700; background:#f4f4f4; padding:10px; border-radius:4px;">UPI: riteek.kumar@ybl</p>
-            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:15px;"><i class="fa-solid fa-lock"></i> Secured under NPCI Trust Guidelines</p>
-        </div>
-    </div>
-
     <div class="lightbox-panel" id="lightboxPlatform" onclick="closeLightbox()">
         <div class="close-lightbox"><i class="fa-solid fa-xmark"></i></div>
         <img src="" class="lightbox-img" id="lightboxTargetMedia">
@@ -745,8 +725,6 @@
         <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Riteek,%20I%20am%20interested%20in%20your%20premium%20digital%20card%20services." target="_blank" class="hud-circle wa-hud" title="Connect over Live WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="tel:+91XXXXXXXXXX" class="hud-circle call-hud" title="Direct Telephone Line"><i class="fa-solid fa-phone"></i></a>
     </div>
-
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <script>
         const drawerTrigger = document.getElementById('drawerTrigger');
@@ -759,6 +737,7 @@
             iconElement.classList.toggle('fa-xmark');
         });
 
+        // SPA Navigation Page Controls
         function toggleView(targetViewPanelId) {
             drawerMenu.classList.remove('active-drawer');
             const toggleIcon = drawerTrigger.querySelector('i');
@@ -810,10 +789,6 @@
             });
         });
 
-        const paymentModal = document.getElementById('paymentPopupModule');
-        function launchPaymentWindow() { paymentModal.style.display = 'flex'; }
-        function closePaymentWindow() { paymentModal.style.display = 'none'; }
-
         const lightbox = document.getElementById('lightboxPlatform');
         const lightboxImg = document.getElementById('lightboxTargetMedia');
         function openLightbox(imageUrlRoute) {
@@ -826,36 +801,6 @@
             event.preventDefault();
             alert("Design brief parsed successfully. Director Riteek Kumar has captured your project layout parameters. An official quote framework will hit your email within 4 hours.");
             event.target.reset();
-        }
-
-        // ==========================================
-        // AUTO-DETECT ENGINE WITH NEW KEY ID
-        // ==========================================
-        function startRazorpayPayment(packageName, amountInRupees) {
-            const amountInPaise = amountInRupees * 100;
-
-            const options = {
-                "key": "rzp_test_SxVIRGTh5tJVat", // तुम्हारी बिल्कुल नई Key ID यहाँ एकदम सही जगह फिट कर दी है भाई 
-                "amount": amountInPaise,
-                "currency": "INR",
-                "name": "MRRITEEK STUDIO",
-                "description": "Payment for " + packageName,
-                "image": "https://heyriteek.github.io/mrriteek-studio/logo.png",
-                "handler": function (response) {
-                    alert("बधाई हो भाई! पेमेंट सफल रहा।\nPayment ID: " + response.razorpay_payment_id);
-                },
-                "prefill": {
-                    "name": "Customer", 
-                    "email": "mrriteek82@gmail.com", 
-                    "contact": "9999999999" 
-                },
-                "theme": {
-                    "color": "#d4af37" 
-                }
-            };
-
-            const rzp = new Razorpay(options);
-            rzp.open();
         }
     </script>
 </body>
